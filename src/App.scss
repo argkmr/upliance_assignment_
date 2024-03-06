@@ -1,0 +1,274 @@
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 5vh;
+  background-color: #242526;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  padding: 1.5rem;
+
+  .nav-link-style {
+    color: antiquewhite;
+    text-decoration: none;
+  }
+
+  .responsive-links {
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    .nav-link-style {
+      display: none;
+    }
+
+    .responsive-links {
+      display: flex;
+      flex-direction: column;
+
+      .nav-link-style-res,
+      .close {
+        text-decoration: none;
+        color: antiquewhite
+      }
+
+      .close {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+
+      .icon {
+        color: white
+      }
+
+      .res-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 1em;
+        // border: 1px solid white;
+        row-gap: 10px;
+        position: relative;
+        top: 5.5em;
+        border-radius: 20px;
+        background-color: #543b6c;
+      }
+    }
+  }
+}
+
+.login,
+.editor-container,
+.dashboard-container,
+.form-container,
+.counter-container {
+  background-color: #313131;
+  min-height: 90vh;
+  color: antiquewhite;
+}
+
+.dashboard-container {
+  min-height: 90vh;
+  // border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 1em;
+  overflow: auto;
+
+  .heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3px;
+    padding-left: 1em;
+    padding-right: 2em;
+  }
+
+  .charts {
+
+    padding-bottom: 3em;
+
+    .bar-chart01,
+    .bar-chart02 {
+      width: 100%;
+      padding: 1em;
+      height: 40vh;
+      // border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width:1000px) {
+    .charts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 0.5em;
+
+      .bar-chart01,
+      .bar-chart02 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1em;
+        padding: 1em;
+        // border: 1px solid white;
+      }
+
+    }
+
+  }
+
+
+
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1em;
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+
+    button {
+      padding: 1em;
+      border-radius: 10px;
+    }
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid blue;
+
+  .form-heading {
+    margin: auto;
+    font-size: x-large;
+    font-weight: 700;
+  }
+
+  form {
+    width: 100%;
+    // border: 1px solid blue;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1em;
+    // padding-bottom: 5em;
+
+    .form-box {
+      width: 40%;
+      height: 84vh;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+      border: 2px solid antiquewhite;
+      border-radius: 5px;
+      padding: 1em;
+      overflow: auto;
+
+      input,
+      select {
+        padding: 1em;
+        border-radius: 7px;
+      }
+
+      .submit-button {
+        background-color: #8855c4a1;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .form-box {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  position: relative;
+
+  .editor-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 2em;
+    padding: 2em;
+    overflow: auto;
+
+    .page-heading {
+      // color: antiquewhite;
+      font-size: xx-large;
+      font-weight: 700;
+    }
+
+    .quill {
+      height: 50%;
+      width: 100%;
+      color: white;
+      overflow: auto;
+      padding-bottom: 4em;
+
+      .ql-toolbar.ql-snow {
+        background-color: antiquewhite;
+      }
+
+      .ql-container.ql-snow {
+        height: 60vh;
+      }
+    }
+  }
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: #242526;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

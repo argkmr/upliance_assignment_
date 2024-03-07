@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCGl712FnjQCyzpaafbJdfdak8MisoLPOY",
+    apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
     authDomain: "upliance-assignment.firebaseapp.com",
     projectId: "upliance-assignment",
     storageBucket: "upliance-assignment.appspot.com",

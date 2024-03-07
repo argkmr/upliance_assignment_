@@ -52,6 +52,7 @@ const FormTask = () => {
         dispatch(setUserArray(updatedArray));
         dispatch(setFormData(formDataWithId));
         reset();
+        setSelectedCity("");
     };
 
     useEffect(() => {
